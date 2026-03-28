@@ -25,7 +25,7 @@ const projects = [
     id: "appocalipse",
     category: "graphic",
     country: "Japan",
-    image: "images/appocalipse.jpg",
+    image: "images/appocalipse.png",
     number: "No.3",
     date: "2026/01/03",
     title: "Appocalipse",

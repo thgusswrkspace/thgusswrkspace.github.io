@@ -141,14 +141,14 @@ main {
   margin-top: 0;
   min-height: calc(100vh - 90px);
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .home-view .intro-rail {
   width: 100%;
   margin-top: 0;
-  min-height: clamp(520px, 72vh, 760px);
-  padding: 58px 14px;
+  min-height: 100%;
+  padding: 58px 14px 92px;
 }
 
 .home-view .poster-card {
@@ -405,6 +405,16 @@ body.project-view {
 }
 
 @media (max-width: 1024px) {
+  body.project-view {
+    overflow: auto;
+  }
+
+  .project-view .page-shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
   .top-nav {
     font-size: 9px;
   }
@@ -416,10 +426,11 @@ body.project-view {
   .detail-layout {
     grid-template-columns: 1fr;
     min-height: auto;
+    gap: 12px;
   }
 
   .project-view .detail-layout {
-    height: calc(100vh - 84px);
+    height: auto;
   }
 
   .catalog-layout {
@@ -464,7 +475,8 @@ body.project-view {
   }
 
   .detail-side {
-    gap: 30px;
+    justify-content: flex-start;
+    gap: 14px;
   }
 }
 
